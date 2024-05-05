@@ -1,5 +1,4 @@
-import pokebase as pb
-import webbrowser
+
 import dash
 from dash import html
 from dash import dcc
@@ -14,18 +13,12 @@ app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server=app.server
 
 
-
-# create app layout
-# dummy line of text
-app.layout = html.Div([
-    html.Div([
-                html.Hr(),
-                html.Div([dbc.Card(
+tab1_content = html.Div([dbc.Card(
     [
         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
         dbc.CardBody(
             [
-                html.H4("Card title", className="card-title"),
+                html.H4("Parkinson's Identification", className="card-title"),
                 html.P(
                     "Some quick example text to build on the card title and "
                     "make up the bulk of the card's content.",
@@ -35,9 +28,65 @@ app.layout = html.Div([
             ]
         ),
     ],
-    style={"width": "18rem"},
+    style={"width": "18rem","display":"inline-block", "margin":"1rem"},
+),dbc.Card(
+    [
+        dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
+        dbc.CardBody(
+            [
+                html.H4("Parkinson's Identification", className="card-title"),
+                html.P(
+                    "Some quick example text to build on the card title and "
+                    "make up the bulk of the card's content.",
+                    className="card-text",
+                ),
+                dbc.Button("Go somewhere", color="primary"),
+            ]
+        ),
+    ],
+    style={"width": "18rem", "display":"inline-block","margin":"1rem"},
 )
-                        ])
+])
+tab2_content = dbc.Card(
+    dbc.CardBody(
+        [
+            html.P("This is tab 2!", className="card-text"),
+            dbc.Button("Don't click here", color="danger"),
+        ]
+    ),
+    className="mt-3",
+)
+
+
+
+# create app layout
+# dummy line of text
+app.layout = html.Div([
+    html.Div([
+                html.Hr(),
+                html.Div([dbc.Tabs([
+                                dbc.Tab(tab1_content, label="Python"),
+                                dbc.Tab(tab2_content, label="Power BI"),
+                                dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True),
+                    ])]),
+#                 html.Div([dbc.Card(
+#     [
+#         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
+#         dbc.CardBody(
+#             [
+#                 html.H4("Card title", className="card-title"),
+#                 html.P(
+#                     "Some quick example text to build on the card title and "
+#                     "make up the bulk of the card's content.",
+#                     className="card-text",
+#                 ),
+#                 dbc.Button("Go somewhere", color="primary"),
+#             ]
+#         ),
+#     ],
+#     style={"width": "18rem"},
+# )
+#                         ])
                 # html.Div([dcc.Dropdown(id='pokemon-name',options=[{'label':i.capitalize(),'value':i} for i in poke_names_list], value='bulbasaur')],style={'width':'20%', 'margin-left':'auto','margin-right':'auto'}),
                 # html.Div([html.H1(id='pokemon-name-id')], style={'text-align':'center'}),
                 # html.Div([
