@@ -65,9 +65,9 @@ app.layout = html.Div([
     html.Div([
                 html.Hr(),
                 html.Div([dbc.Tabs([
-                                dbc.Tab(tab1_content, label="Python"),
-                                dbc.Tab(tab2_content, label="Power BI"),
-                                dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True),
+                                dbc.Tab(tab1_content, label="Python", tab_style={"width":"30%"}),
+                                dbc.Tab(tab2_content, label="Power BI", tab_style={"width":"30%"}),
+                                dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True, tab_style={"width":"30%"}),
                     ])]),
 #                 html.Div([dbc.Card(
 #     [
