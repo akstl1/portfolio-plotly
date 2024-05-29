@@ -60,7 +60,7 @@ import dash_bootstrap_components as dbc
 
 
 def create_navbar_new():
-    navbar_new = dbc.Row([
+    navbar_new = html.Div([dbc.Row([
                         dbc.Col(html.Div(html.Img(src="assets/head_shot.jpg", height=250,
                             style={
                                 # "width":"40%", 
@@ -81,5 +81,6 @@ def create_navbar_new():
                         ]),width=6,style={})
                         
                     ])
+    ],style={"background":"#101010"})
 
     return navbar_new
