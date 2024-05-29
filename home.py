@@ -76,8 +76,13 @@ app.layout = html.Div([
 ####################
                 html.Div([
                     dbc.Row([
-                        dbc.Col(html.Div("One col"),width=4,style={"background-color":"red"}),
-                        dbc.Col(html.Div(html.Img(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true")))
+                        dbc.Col(html.Div([
+                            html.H1("Allan Khariton"),
+                            html.H1("Data Science Portfolio"),
+                            html.Hr(),
+                            html.H6("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",style={"color":"white"})
+                        ]),width=4,style={}),
+                        dbc.Col(html.Div(html.Img(src="assets/head_shot.jpg")))
                     ])
                 ],style={"background":"#101010"}),
 ####################
@@ -108,7 +113,29 @@ app.layout = html.Div([
 #     style={"width": "18rem"},
 # )
 #                         ])
-                # html.Div([dcc.Dropdown(id='pokemon-name',options=[{'label':i.capitalize(),'value':i} for i in poke_names_list], value='bulbasaur')],style={'width':'20%', 'margin-left':'auto','margin-right':'auto'}),
+                
+
+                    ], style={'height':'300px'})
+
+
+])
+
+####################
+### end app layout
+####################
+
+
+####################
+### run app
+####################
+if __name__=="__main__":
+    app.run_server()
+
+
+####################
+### old layout code
+####################
+# html.Div([dcc.Dropdown(id='pokemon-name',options=[{'label':i.capitalize(),'value':i} for i in poke_names_list], value='bulbasaur')],style={'width':'20%', 'margin-left':'auto','margin-right':'auto'}),
                 # html.Div([html.H1(id='pokemon-name-id')], style={'text-align':'center'}),
                 # html.Div([
                 #     html.Div([html.Img(id="pokemon-sprite")],style={'display':'inline-block', 'width':'20%','height':'300px', 'margin-right':'60px','margin-left':'80px', 'text-align':'center','vertical-align':'top' }),
@@ -123,14 +150,10 @@ app.layout = html.Div([
                 #             html.P(id='pokemon-type')], style={'display':'inline-block', 'width':'30%','height':'300px','background-color':'#30a7d7', 'vertical-align':'top', 'padding-left':'10px','padding-right':'10px', 'border-radius':'10px'}),
                 #             html.Div([dcc.Graph(id='graph')], style={'display':'inline-block','width':'30%', 'margin-left':'40px'})
 
-                    ], style={'height':'300px'})
 
 
-])
 
-####################
-### end app layout
-####################
+
 
 # , style={'background-color':'LightCyan', 'padding-bottom':'275px'})
 
@@ -209,9 +232,3 @@ app.layout = html.Div([
 #     fig = px.bar(df, x="Stat", y="Base Value",text_auto=True)
 #     fig.update_yaxes(range=[0, 270])
 #     return fig,{'height':'300px'}
-
-####################
-### run app
-####################
-if __name__=="__main__":
-    app.run_server()
