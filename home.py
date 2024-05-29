@@ -1,3 +1,7 @@
+####################
+### imports
+### TO START APP, GO INTO DIRECTORY AND RUN: python .\home.py
+####################
 
 import dash
 from dash import html
@@ -9,10 +13,16 @@ from dash.dependencies import Input, Output, State
 import requests
 import plotly.express as px
 
+####################
+### dash app setup
+####################
+
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server=app.server
 
-
+####################
+### styling tabs
+####################
 tab1_content = html.Div([dbc.Card(
     [
         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
@@ -57,14 +67,25 @@ tab2_content = dbc.Card(
     className="mt-3",
 )
 
-
-
-# create app layout
-# dummy line of text
+####################
+### create app layout
+####################
 app.layout = html.Div([
-    html.Div([
-                html.Hr(),
-                html.Div([dbc.Tabs([
+####################
+### header div
+####################
+                html.Div([
+                    dbc.Row([
+                        dbc.Col(html.Div("One col"),width=4,style={"background-color":"red"}),
+                        dbc.Col(html.Div(html.Img(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true")))
+                    ])
+                ],style={"background":"#101010"}),
+####################
+### project tab div
+####################
+                html.Div([
+                    html.Hr(),
+                    html.Div([dbc.Tabs([
                                 dbc.Tab(tab1_content, label="Python", tab_style={"width":"30%"}),
                                 dbc.Tab(tab2_content, label="Power BI", tab_style={"width":"30%"}),
                                 dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True, tab_style={"width":"30%"}),
@@ -106,6 +127,11 @@ app.layout = html.Div([
 
 
 ])
+
+####################
+### end app layout
+####################
+
 # , style={'background-color':'LightCyan', 'padding-bottom':'275px'})
 
 #create callback to get pokemon stats for above elements
@@ -184,5 +210,8 @@ app.layout = html.Div([
 #     fig.update_yaxes(range=[0, 270])
 #     return fig,{'height':'300px'}
 
+####################
+### run app
+####################
 if __name__=="__main__":
     app.run_server()
