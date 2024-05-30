@@ -90,7 +90,7 @@ def create_navbar_new():
                     ],
                     href="",
                     target="_blank"
-                )
+                ),style={"margin-right":"3em"}
 
             ),
             dbc.NavItem(
@@ -101,7 +101,7 @@ def create_navbar_new():
                     ],
                     href="https://github.com/akstl1",
                     target="_blank"
-                )
+                ),style={"margin-right":"3em"}
 
             ),
             dbc.NavItem(
@@ -112,7 +112,7 @@ def create_navbar_new():
                     ],
                     href="https://www.linkedin.com/in/allan-khariton/",
                     target="_blank"
-                )
+                ),style={"margin-right":"3em"}
 
             ),
             dbc.NavItem(
@@ -123,14 +123,14 @@ def create_navbar_new():
                     ],
                     href="[YOUR LINKEDIN PROFILE URL]",
                     target="_blank"
-                )
+                ),style={"margin-right":"3em"}
 
             )
             
         ],
         brand='Home',
         brand_href="/",
-        # sticky="top",  # Uncomment if you want the navbar to always appear at the top on scroll.
+        sticky="top",  # Uncomment if you want the navbar to always appear at the top on scroll.
         color="dark",  # Change this to change color of the navbar e.g. "primary", "secondary" etc.
         dark=True,  # Change this to change color of text within the navbar (False for dark text)
     )

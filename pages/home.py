@@ -19,7 +19,7 @@ tab1_content = html.Div([dbc.Card(
         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
         dbc.CardBody(
             [
-                html.H4("Parkinson's Identification", className="card-title"),
+                html.H4("Heart Disease Classification", className="card-title"),
                 html.P(
                     "Some quick example text to build on the card title and "
                     "make up the bulk of the card's content.",
@@ -29,7 +29,7 @@ tab1_content = html.Div([dbc.Card(
             ]
         ),
     ],
-    style={"width": "18rem","display":"inline-block", "margin":"1rem"},
+    style={"width": "25%","display":"inline-block", "margin":"1rem"},
 ),dbc.Card(
     [
         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
@@ -45,7 +45,7 @@ tab1_content = html.Div([dbc.Card(
             ]
         ),
     ],
-    style={"width": "18rem", "display":"inline-block","margin":"1rem"},
+    style={"width": "25%", "display":"inline-block","margin":"1rem"},
 )
 ])
 tab2_content = dbc.Card(
@@ -61,11 +61,6 @@ tab2_content = dbc.Card(
 
 def layout():
     layout = html.Div([
-        html.H1(
-            [
-                "Home Page"
-            ]
-        ),
         html.Div([
                     html.Hr(),
                     html.Div([dbc.Tabs([
