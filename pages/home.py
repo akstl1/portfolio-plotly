@@ -19,15 +19,22 @@ tab1_content = html.Div([
     create_card(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Heart Disease Classification",
-            description="Some quick example text to build on the card title and"),
+            description="Some quick example text to build on the card title and",
+            position="left",
+            url="/home"
+            ),
     create_card(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
-            title="Test",
-            description="Some quick example text to build on the card title and"),
+            title="Parkinson's Identification",
+            description="Some quick example text to build on the card title and",
+            position="right",
+            url="/home"),
     create_card(
-        image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
-        title="Parkinson's Identification",
-        description="Some quick example text to build on the card title and")
+            image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+            title="Telecom Customer Churn Prediction",
+            description="Some quick example text to build on the card title and",
+            position="left",
+            url="/pokedex")
 ])
 
 tab2_content = dbc.Card(

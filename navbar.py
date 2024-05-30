@@ -76,7 +76,7 @@ def create_navbar_new():
                             html.H1("Allan Khariton",style={"color":"white", "text-align":"right", "margin-top":"1em"}),
                             html.H1("Data Science Portfolio",style={"color":"white", "text-align":"right","align":"center"}),
                             html.Hr(style={"border":"3px solid white", "border-radius":"5px","color":"white"}),
-                            html.H5("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
+                            html.H6("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
                                         style={"color":"white", "font-weight":"normal"})
                         ]),width=6,style={}),
                         dbc.Col(style={"padding":"0px","background":"#101010"}),
@@ -88,8 +88,8 @@ def create_navbar_new():
                         html.I(className="fa-solid fa-location-dot"),  # Font Awesome Icon
                         " Rockville, MD"  # Text beside icon
                     ],
-                    href="",
-                    target="_blank"
+                    # href="",
+                    # target="_blank"
                 ),style={"margin-right":"3em"}
 
             ),

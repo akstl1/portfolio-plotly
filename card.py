@@ -1,7 +1,13 @@
 from dash import html
 import dash_bootstrap_components as dbc
 
-def create_card(image,title,description):
+def create_card(image,title,description,position,url):
+    if position=="left":
+        left="10%"
+        right="5%"
+    else:
+        left="5%"
+        right="10%"
     card = dbc.Card(
     [
         dbc.CardImg(src=image, top=True),
@@ -12,11 +18,11 @@ def create_card(image,title,description):
                     description,
                     className="card-text",
                 ),
-                dbc.Button("View Project", color="primary"),
+                dbc.Button("View Project", color="primary",href=url),
             ]
         ),
     ],
-    style={"width": "25%","display":"inline-block", "margin":"1rem"},
+    style={"width": "auto","display":"inline-block", "margin-top":"2em", "margin-bottom":"1em","margin-left":left,"margin-right":right},
 )
 # def create_navbar():
     # navbar = dbc.NavbarSimple(
