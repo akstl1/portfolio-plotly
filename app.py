@@ -9,6 +9,7 @@ import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 import requests
 import plotly.express as px
+from card import create_card
 # Toggle the themes at [dbc.themes.LUX]
 # The full list of available themes is:
 # BOOTSTRAP, CERULEAN, COSMO, CYBORG, DARKLY, FLATLY, JOURNAL, LITERA, LUMEN,
@@ -18,6 +19,7 @@ import plotly.express as px
 # https://dash-bootstrap-components.opensource.faculty.ai/docs/themes/explorer/
 
 NAVBAR = create_navbar_new()
+# CARD = create_card()
 # To use Font Awesome Icons
 FA621 = "https://use.fontawesome.com/releases/v6.2.1/css/all.css"
 APP_TITLE = "First Dash App"

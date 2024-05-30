@@ -6,6 +6,7 @@ import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 import requests
 import plotly.express as px
+from card import create_card
 
 register_page(
     __name__,
@@ -30,8 +31,8 @@ tab1_content = html.Div([dbc.Card(
         ),
     ],
     style={"width": "25%","display":"inline-block", "margin":"1rem"},
-),dbc.Card(
-    [
+),
+    dbc.Card([
         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
         dbc.CardBody(
             [
@@ -46,8 +47,10 @@ tab1_content = html.Div([dbc.Card(
         ),
     ],
     style={"width": "25%", "display":"inline-block","margin":"1rem"},
-)
+        ),
+        create_card("https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true","Parkinson's Identification","Some quick example text to build on the card title and")
 ])
+
 tab2_content = dbc.Card(
     dbc.CardBody(
         [
