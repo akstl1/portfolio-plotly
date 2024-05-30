@@ -9,9 +9,9 @@ import plotly.express as px
 
 register_page(
     __name__,
-    name='Home',
+    name='Pokedex',
     top_nav=True,
-    path='/home3'
+    path='/pokedex'
 )
 
 
@@ -20,7 +20,7 @@ def layout():
     layout = html.Div([
         html.H1(
             [
-                "Home Page"
+                "Pokedex"
             ]
         )
         

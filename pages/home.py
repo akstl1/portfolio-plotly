@@ -41,7 +41,7 @@ tab1_content = html.Div([dbc.Card(
                     "make up the bulk of the card's content.",
                     className="card-text",
                 ),
-                dbc.Button("Go somewhere", color="primary",href="/home3"),
+                dbc.Button("Go somewhere", color="primary",href="/pokedex"),
             ]
         ),
     ],
