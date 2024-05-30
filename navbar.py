@@ -78,7 +78,62 @@ def create_navbar_new():
                             html.Hr(style={"border":"3px solid white", "border-radius":"5px","color":"white"}),
                             html.H5("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
                                         style={"color":"white", "font-weight":"normal"})
-                        ]),width=6,style={})
+                        ]),width=6,style={}),
+                        dbc.Col(style={"padding":"0px","background":"#101010"}),
+                        dbc.NavbarSimple(
+        children=[
+            dbc.NavItem(
+                dbc.NavLink(
+                    [
+                        html.I(className="fa-solid fa-location-dot"),  # Font Awesome Icon
+                        " Rockville, MD"  # Text beside icon
+                    ],
+                    href="",
+                    target="_blank"
+                )
+
+            ),
+            dbc.NavItem(
+                dbc.NavLink(
+                    [
+                        html.I(className="fa-brands fa-github"),  # Font Awesome Icon
+                        " Github"  # Text beside icon
+                    ],
+                    href="https://github.com/akstl1",
+                    target="_blank"
+                )
+
+            ),
+            dbc.NavItem(
+                dbc.NavLink(
+                    [
+                        html.I(className="fa-brands fa-linkedin"),  # Font Awesome Icon
+                        " LinkedIn"  # Text beside icon
+                    ],
+                    href="https://www.linkedin.com/in/allan-khariton/",
+                    target="_blank"
+                )
+
+            ),
+            dbc.NavItem(
+                dbc.NavLink(
+                    [
+                        html.I(className="fa-regular fa-file"),  # Font Awesome Icon
+                        " Resume"  # Text beside icon
+                    ],
+                    href="[YOUR LINKEDIN PROFILE URL]",
+                    target="_blank"
+                )
+
+            )
+            
+        ],
+        brand='Home',
+        brand_href="/",
+        # sticky="top",  # Uncomment if you want the navbar to always appear at the top on scroll.
+        color="dark",  # Change this to change color of the navbar e.g. "primary", "secondary" etc.
+        dark=True,  # Change this to change color of text within the navbar (False for dark text)
+    )
                         
                     ])
     ],style={"background":"#101010"})
