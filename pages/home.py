@@ -15,40 +15,19 @@ register_page(
     path='/'
 )
 
-tab1_content = html.Div([dbc.Card(
-    [
-        dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
-        dbc.CardBody(
-            [
-                html.H4("Heart Disease Classification", className="card-title"),
-                html.P(
-                    "Some quick example text to build on the card title and "
-                    "make up the bulk of the card's content.",
-                    className="card-text",
-                ),
-                dbc.Button("Go somewhere", color="primary"),
-            ]
-        ),
-    ],
-    style={"width": "25%","display":"inline-block", "margin":"1rem"},
-),
-    dbc.Card([
-        dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
-        dbc.CardBody(
-            [
-                html.H4("Parkinson's Identification", className="card-title"),
-                html.P(
-                    "Some quick example text to build on the card title and "
-                    "make up the bulk of the card's content.",
-                    className="card-text",
-                ),
-                dbc.Button("Go somewhere", color="primary",href="/pokedex"),
-            ]
-        ),
-    ],
-    style={"width": "25%", "display":"inline-block","margin":"1rem"},
-        ),
-        create_card("https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true","Parkinson's Identification","Some quick example text to build on the card title and")
+tab1_content = html.Div([
+    create_card(
+            image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+            title="Heart Disease Classification",
+            description="Some quick example text to build on the card title and"),
+    create_card(
+            image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+            title="Test",
+            description="Some quick example text to build on the card title and"),
+    create_card(
+        image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+        title="Parkinson's Identification",
+        description="Some quick example text to build on the card title and")
 ])
 
 tab2_content = dbc.Card(
