@@ -21,7 +21,7 @@ tab1_content = html.Div([
             title="Heart Disease Classification",
             description="Some quick example text to build on the card title and",
             position="left",
-            url="/home"
+            url="/heart_disease_classification"
             ),
     create_card(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
