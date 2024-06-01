@@ -34,7 +34,13 @@ tab1_content = html.Div([
             title="Telecom Customer Churn Prediction",
             description="Some quick example text to build on the card title and",
             position="left",
-            url="/BI_aggregation")
+            url="/BI_aggregation"),
+    create_card(
+            image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+            title="Analyducks",
+            description="Some quick example text to build on the card title and",
+            position="left",
+            url="/analyducks")
 ])
 
 tab2_content = dbc.Card(
