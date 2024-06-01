@@ -28,25 +28,29 @@ layout = html.Div([
     # create initial data inputs for query. Allow user to input previous table name, grouping var, and whether to keep first/last entries
     # all the above are needed in the final query
     html.Div([
-        html.H1("Power BI Data Aggregation Query Builder"),
+        html.H1("Power BI Data Aggregation Query Builder",style={"text-align":"center","margin-bottom":"1em"}),
         html.H3("Enter Previous Table Name:"),
-        dcc.Input(id='previous_table_name', value="Pivoted Table"),
+        dcc.Input(id='previous_table_name', value="Pivoted Table",style={"margin-bottom":"1em"}),
         html.H3("Enter Variable To Group By:"),
-        dcc.Input(id='group_by_variable', value="ProjectID"),
+        dcc.Input(id='group_by_variable', value="ProjectID",style={"margin-bottom":"1em"}),
         html.H3("Enter whether to keep First or Last value inputs:"),
-        dcc.Dropdown([{'label':'First','value':'First'},{'label':'Last','value':'Last'}],value="Last",id="first_last",style={'width':'177px'}),
+        dcc.Dropdown([{'label':'First','value':'First'},{'label':'Last','value':'Last'}],value="Last",id="first_last",style={'width':'177px',"margin-bottom":"1em"}),
         html.H3("Enter whether to add an Index to re-named field:"),
-        dcc.Dropdown([{'label':'Yes','value':'Yes'},{'label':'No','value':'No'}],value='Yes',id="name_index",style={'width':'177px'})]),
+        dcc.Dropdown([{'label':'Yes','value':'Yes'},{'label':'No','value':'No'}],value='Yes',id="name_index",style={'width':'177px',"margin-bottom":"1em"})
+        
+        ],style={"margin-left":"2em","margin-top":"1em"}),
     # section to upload an excel or csv file with column names to include in the query
     html.Div([
+    html.H3("Please input your excel/csv file with columns to be combined:"),
+    html.P("Please input columns in one column, with no headers, exactly as the column names appear in Power BI"),
     dcc.Upload(
         id='upload-data',
         children=html.Div([
-            'Drag and Drop or ',
+            'Drop / ',
             html.A('Select Files')
         ]),
         style={
-            'width': '100%',
+            'width': '40%',
             'height': '60px',
             'lineHeight': '60px',
             'borderWidth': '1px',
@@ -61,7 +65,7 @@ layout = html.Div([
     #section within the div that will return the final query output
     html.H2("Final Query Result:"),
     html.Div(id='output-data-upload'),
-    ])
+    ],style={"margin-left":"2em"})
 ])
 
 # function, from plotly docs, that will read in data
