@@ -34,7 +34,7 @@ tab1_content = html.Div([
             title="Telecom Customer Churn Prediction",
             description="Some quick example text to build on the card title and",
             position="left",
-            url="/pokedex")
+            url="/BI_aggregation")
 ])
 
 tab2_content = dbc.Card(
