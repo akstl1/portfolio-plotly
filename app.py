@@ -23,7 +23,7 @@ NAVBAR = create_navbar_new()
 # To use Font Awesome Icons
 FA621 = "https://use.fontawesome.com/releases/v6.2.1/css/all.css"
 APP_TITLE = "Allan K Portfolio"
-cards = "/assets/cardStyle.css"
+style = "/assets/Style.css"
 tabs = 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 app = dash.Dash(
     __name__,
@@ -33,7 +33,7 @@ app = dash.Dash(
         dbc.themes.BOOTSTRAP,  # Dash Themes CSS
         # dbc.themes.BOOTSTRAP,
         FA621,  # Font Awesome Icons CSS
-        cards
+        style
     ],
     title=APP_TITLE,
     use_pages=True,  

@@ -41,15 +41,14 @@ python_tab = html.Div([
             url="/analyducks")
 ],style={"background-color":"#2C2F36"})
 
-bi_tab = dbc.Card(
-    dbc.CardBody(
-        [
-            html.P("This is tab 2!", className="card-text"),
-            dbc.Button("Don't click here", color="danger"),
-        ]
-    ),
-    className="mt-3",
-)
+bi_tab = html.Div([
+    create_card_left(
+            image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+            title="Heart Disease Classification",
+            description="Some quick example text to build on the card title and",
+            url="/heart_disease_classification"
+            )
+],style={"background-color":"#2C2F36"})
 
 
 def layout():
@@ -58,12 +57,12 @@ def layout():
                     # html.Hr(),
                     html.Div([
                         dbc.Tabs([
-                                dbc.Tab(python_tab, label="Python",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"30%"}),
-                                dbc.Tab(bi_tab, label="Power BI", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"30%"}),
-                                dbc.Tab("This tab's content is never seen", className="custom-tab",active_tab_class_name='custom-tab--selected',label="Tableau", disabled=True, tab_style={"width":"30%"}),
+                                dbc.Tab(python_tab,label="Python",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"33%"}),
+                                dbc.Tab(bi_tab, label="Power BI", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"33%"}),
+                                dbc.Tab(bi_tab, className="custom-tab",active_tab_class_name='custom-tab--selected',label="Tableau", tab_style={"width":"33%"}),
                         ],style={"background-color":"#adadad","font-weight":"bold","height":"44px"})
                     ]),
-        ], style={'height':'300px'})
+        ], style={'height':'300px',"background-color":"#adadad"})
         
-    ])
+    ],style={"background-color":"#adadad"})
     return layout
