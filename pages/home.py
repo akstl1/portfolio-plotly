@@ -6,7 +6,7 @@ import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 import requests
 import plotly.express as px
-from card import create_card
+from card import create_card_left, create_card_right
 
 register_page(
     __name__,
@@ -15,31 +15,29 @@ register_page(
     path='/'
 )
 
+
+
 tab1_content = html.Div([
-    create_card(
+    create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Heart Disease Classification",
             description="Some quick example text to build on the card title and",
-            position="left",
             url="/heart_disease_classification"
             ),
-    create_card(
+    create_card_right(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Parkinson's Identification",
             description="Some quick example text to build on the card title and",
-            position="right",
             url="/home"),
-    create_card(
+    create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Telecom Customer Churn Prediction",
             description="Some quick example text to build on the card title and",
-            position="left",
             url="/BI_aggregation"),
-    create_card(
+    create_card_right(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Analyducks",
             description="Some quick example text to build on the card title and",
-            position="left",
             url="/analyducks")
 ])
 

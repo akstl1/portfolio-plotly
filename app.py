@@ -9,7 +9,7 @@ import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 import requests
 import plotly.express as px
-from card import create_card
+from card import create_card_left,create_card_right
 # Toggle the themes at [dbc.themes.LUX]
 # The full list of available themes is:
 # BOOTSTRAP, CERULEAN, COSMO, CYBORG, DARKLY, FLATLY, JOURNAL, LITERA, LUMEN,
@@ -23,7 +23,7 @@ NAVBAR = create_navbar_new()
 # To use Font Awesome Icons
 FA621 = "https://use.fontawesome.com/releases/v6.2.1/css/all.css"
 APP_TITLE = "Allan K Portfolio"
-
+cards = "/assets/cardStyle.css"
 app = dash.Dash(
     __name__,
     # suppress_callback_exceptions=True,
@@ -32,6 +32,7 @@ app = dash.Dash(
         dbc.themes.BOOTSTRAP,  # Dash Themes CSS
         # dbc.themes.BOOTSTRAP,
         FA621,  # Font Awesome Icons CSS
+        cards
     ],
     title=APP_TITLE,
     use_pages=True,  
