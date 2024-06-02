@@ -24,6 +24,7 @@ NAVBAR = create_navbar_new()
 FA621 = "https://use.fontawesome.com/releases/v6.2.1/css/all.css"
 APP_TITLE = "Allan K Portfolio"
 cards = "/assets/cardStyle.css"
+tabs = 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 app = dash.Dash(
     __name__,
     # suppress_callback_exceptions=True,

@@ -55,13 +55,13 @@ bi_tab = dbc.Card(
 def layout():
     layout = html.Div([
         html.Div([
-                    html.Hr(),
+                    # html.Hr(),
                     html.Div([
                         dbc.Tabs([
-                                dbc.Tab(python_tab, label="Python", tab_style={"width":"30%"}),
-                                dbc.Tab(bi_tab, label="Power BI", tab_style={"width":"30%"}),
-                                dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True, tab_style={"width":"30%"}),
-                        ])
+                                dbc.Tab(python_tab, label="Python",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"30%"}),
+                                dbc.Tab(bi_tab, label="Power BI", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"30%"}),
+                                dbc.Tab("This tab's content is never seen", className="custom-tab",active_tab_class_name='custom-tab--selected',label="Tableau", disabled=True, tab_style={"width":"30%"}),
+                        ],style={"background-color":"#adadad","font-weight":"bold","height":"44px"})
                     ]),
         ], style={'height':'300px'})
         

@@ -35,6 +35,33 @@
 .card {
   border-radius: 3%;
   border-color: #2C2F36;
-  background-color: #adadad;
+  background-color: #e3e0d8;
   
+}
+
+.card h4 {
+  color: black;
+}
+
+.custom-tab {
+  color:#586069;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top: 3px solid transparent !important;
+  border-left: 0px !important;
+  border-right: 0px !important;
+  border-bottom: 0px !important;
+  background-color: #2C2F36;
+  padding: 12px !important;
+  font-family: "system-ui";
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.custom-tab--selected {
+  color: black !important;
+  box-shadow: 1px 1px 0px white;
+  border-left: 1px solid lightgrey !important;
+  border-right: 1px solid lightgrey !important;
+  border-top: 3px solid #e36209 !important;
 }
