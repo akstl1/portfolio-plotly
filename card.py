@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 def create_card_left(image,title,description,url):
     card_left = dbc.Card(
     [
-        dbc.CardImg(src=image, top=True,style={"border-top-left-radius":"2%","border-top-right-radius":"2%"}),
+        dbc.CardImg(src=image, top=True,style={"border-top":"#2C2F36","border-top-left-radius":"2%","border-top-right-radius":"2%"}),
         dbc.CardBody(
             [
                 html.H4(title, className="card-title"),

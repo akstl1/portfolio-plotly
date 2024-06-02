@@ -17,7 +17,7 @@ register_page(
 
 
 
-tab1_content = html.Div([
+python_tab = html.Div([
     create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Heart Disease Classification",
@@ -28,7 +28,7 @@ tab1_content = html.Div([
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Parkinson's Identification",
             description="Some quick example text to build on the card title and",
-            url="/home"),
+            url="/"),
     create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Telecom Customer Churn Prediction",
@@ -39,9 +39,9 @@ tab1_content = html.Div([
             title="Analyducks",
             description="Some quick example text to build on the card title and",
             url="/analyducks")
-])
+],style={"background-color":"#2C2F36"})
 
-tab2_content = dbc.Card(
+bi_tab = dbc.Card(
     dbc.CardBody(
         [
             html.P("This is tab 2!", className="card-text"),
@@ -56,32 +56,14 @@ def layout():
     layout = html.Div([
         html.Div([
                     html.Hr(),
-                    html.Div([dbc.Tabs([
-                                dbc.Tab(tab1_content, label="Python", tab_style={"width":"30%"}),
-                                dbc.Tab(tab2_content, label="Power BI", tab_style={"width":"30%"}),
+                    html.Div([
+                        dbc.Tabs([
+                                dbc.Tab(python_tab, label="Python", tab_style={"width":"30%"}),
+                                dbc.Tab(bi_tab, label="Power BI", tab_style={"width":"30%"}),
                                 dbc.Tab("This tab's content is never seen", label="Tableau", disabled=True, tab_style={"width":"30%"}),
-                    ])]),
-#                 html.Div([dbc.Card(
-#     [
-#         dbc.CardImg(src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true", top=True),
-#         dbc.CardBody(
-#             [
-#                 html.H4("Card title", className="card-title"),
-#                 html.P(
-#                     "Some quick example text to build on the card title and "
-#                     "make up the bulk of the card's content.",
-#                     className="card-text",
-#                 ),
-#                 dbc.Button("Go somewhere", color="primary"),
-#             ]
-#         ),
-#     ],
-#     style={"width": "18rem"},
-# )
-#                         ])
-                
-
-                    ], style={'height':'300px'})
+                        ])
+                    ]),
+        ], style={'height':'300px'})
         
     ])
     return layout
