@@ -10,7 +10,9 @@ import plotly.express as px
 import pokebase as pb
 import webbrowser
 
-
+############
+# register page for pokedex project, including page title and nav link
+############
 
 register_page(
     __name__,
@@ -19,8 +21,9 @@ register_page(
     path='/pokedex'
 )
 
-# app = dash.Dash()
-# server=app.server
+############
+# API call setup
+############
 
 # get the total count of pokemon from pokeAPI, store as string variable
 poke_count=requests.get("https://pokeapi.co/api/v2/pokemon-species")
@@ -37,7 +40,13 @@ for name in poke_names_request_response['results']:
     poke_names_list.append(name['name'])
 
 
-
+############
+# layout of page
+# 1 - dropdown to select desired pokemon
+# 2 - pokemon image
+# 3 - pokemon facts
+# 4 - pokemon stats chart
+#=############
 layout = html.Div([
     html.Div([
                 html.Hr(),
@@ -63,8 +72,13 @@ layout = html.Div([
 ], style={'background-color':'LightCyan', 'padding-bottom':'275px'})
     
 
-#create callback to get pokemon stats for above elements
+############
+# callbacks definition to update information in the page above based on user input
+############
 
+############
+# callback to get pokemon characteristics for image and text sections
+############
 @callback(Output('pokemon-name-id','children'),
               Output('pokemon-description','children'),
               Output('pokemon-ability','children'),
@@ -118,8 +132,9 @@ def name_and_id(poke_input):
     ## return statement
     return "{} #{}".format(name, id),"Description: {}".format(entry),"Abilities: "+', '.join(abilities),"Types: "+', '.join(types),"Height: {} m".format(height),"Weight: {} kg".format(weight),"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+id+".png", {'width':'275px', 'text-align':'center'}
 
+############
 # create callback and function to generate base stats graph
-
+############
 @callback(Output('graph', 'figure'),
               Output('graph', 'style'),
               [Input('pokemon-name','value')])

@@ -1,6 +1,11 @@
 from dash import html
 import dash_bootstrap_components as dbc
 
+### create two card classes, one for left and one for right side. these are identical except for margin styling that is set in css file via classL/R classNames
+
+### cards will be used on the home page to display the project summaries for users to click on
+### cards contain an image, title, description, and button with link to the project page
+
 def create_card_left(image,title,description,url):
     card_left = dbc.Card(
     [
@@ -21,8 +26,6 @@ def create_card_left(image,title,description,url):
            },
     className="cardL"
 )
-
-
     return card_left
 
 def create_card_right(image,title,description,url):
@@ -45,6 +48,4 @@ def create_card_right(image,title,description,url):
            },
     className="cardR"
 )
-
-
     return card_right

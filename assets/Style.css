@@ -1,5 +1,8 @@
+/* ####################### */
+/* CARD STYLING */
+/* ####################### */
 
-
+/* change card size based on scren size */
 @media (min-width: 577px) {
     .cardL {
       width: 38%;
@@ -31,7 +34,7 @@
   }
 
 
-
+/* give cards a border, set color styling */
 .card {
   border-radius: 3%;
   border-color: #2C2F36;
@@ -39,9 +42,14 @@
   
 }
 
+/* set card title styling */
 .card h4 {
   color: black;
 }
+
+/* ####################### */
+/* TAB STYLING */
+/* ####################### */
 
 .custom-tab {
   color:#586069 !important;
@@ -66,7 +74,3 @@
     /* box-shadow: 1px 1px 0px white; */
 
 }
-
-/* .tab-pane {
-  background-color: #2C2F36;
-} */

@@ -1,13 +1,11 @@
 import dash
 from dash import html, dcc, register_page  #, callback # If you need callbacks, import it here.
 import dash_bootstrap_components as dbc
-import pandas as pd
-import plotly.graph_objs as go
-from dash.dependencies import Input, Output, State
-import requests
-import plotly.express as px
 from card import create_card_left, create_card_right
 
+
+
+# register page with page name
 register_page(
     __name__,
     name='Home',
@@ -16,7 +14,9 @@ register_page(
 )
 
 
-
+############
+# content of the python tab, including all relevant cards for projects
+#=############
 python_tab = html.Div([
     create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
@@ -41,6 +41,9 @@ python_tab = html.Div([
             url="/analyducks")
 ],style={"background-color":"#2C2F36"})
 
+############
+# content of the BI tab, including all relevant cards for projects
+#=############
 bi_tab = html.Div([
     create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
@@ -50,7 +53,9 @@ bi_tab = html.Div([
             )
 ],style={"background-color":"#2C2F36"})
 
-
+############
+# layout of the app, referencing the above tab content variables
+#=############
 def layout():
     layout = html.Div([
         html.Div([
