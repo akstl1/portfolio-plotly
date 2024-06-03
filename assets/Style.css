@@ -74,3 +74,14 @@
     /* box-shadow: 1px 1px 0px white; */
 
 }
+
+/* ####################### */
+/* CODE SNIPPET STYLING */
+/* ####################### */
+
+.hljs {
+  background-color: #e5e5e5;
+  /* border-radius: 3%; */
+  /* width: 90%; */
+  overflow-wrap: break-word;
+}
