@@ -12,9 +12,9 @@ import dash_bootstrap_components as dbc
 # 3 - second navbar with links to home page, location, and professional media links
 #=############
 def create_navbar_new():
-    navbar_new = html.Div([dbc.Row([
-                        # headshot
-                        dbc.Col(html.Div(html.Img(src="assets/head_shot.jpg", height=250,
+    navbar_new = html.Div([
+                        html.Div([
+                            html.Div([html.Img(src="assets/head_shot.jpg", height=250, className="navImage",
                             style={
                                 # "width":"40%", 
                                 "border-radius":"50%", 
@@ -22,17 +22,56 @@ def create_navbar_new():
                                 "margin-left":"auto",
                                 "margin-right":"1em",
                                 "margin-top":"1em",
-                                "border":"4px solid white"}
+                                "border":"4px solid white",
+                                "display":"inline-block",
+                                "width":"auto"
+                                }
+                                )],style={"display":"inline-block"}),
+
+                            html.Div([
+                                html.H1("Allan Khariton",style={"color":"white", "text-align":"right", "margin-top":"1em"}),
+                                html.H1("Data Science & Analytics Portfolio",style={"color":"white", "text-align":"right","align":"center"}),
+                                html.Hr(style={"border":"3px solid white", "border-radius":"5px","color":"white"}),
+                                html.H6("I'm a Data & BI Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
+                                        style={"color":"white", "font-weight":"normal","display":"inline-block"})
+                        ],style={"display":"inline-block"})
+                        ],style={"display":"flex"}),
+
+
+                        # html.Div([
+                        #     html.H1("Allan Khariton",style={"color":"white", "text-align":"right", "margin-top":"1em"}),
+                        #     html.H1("Data Science & Analytics Portfolio",style={"color":"white", "text-align":"right","align":"center"}),
+                        #     html.Hr(style={"border":"3px solid white", "border-radius":"5px","color":"white"}),
+                        #     html.H6("I'm a Data & BI Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
+                        #                 style={"color":"white", "font-weight":"normal","display":"inline-block"})
+                        # ]),
+                        
+                        
+                        
+                        dbc.Row([
+                        # headshot
+                        dbc.Col(html.Div(html.Img(src="assets/head_shot.jpg", height=250, className="navImage"
+                            # style={
+                            #     # "width":"40%", 
+                            #     "border-radius":"50%", 
+                            #     "display":"block",
+                            #     "margin-left":"auto",
+                            #     "margin-right":"1em",
+                            #     "margin-top":"1em",
+                            #     "border":"4px solid white"}
                                 )),
-                            width=4),
+                            width=4
+                            ),
                         # name, title, description
                         dbc.Col(html.Div([
                             html.H1("Allan Khariton",style={"color":"white", "text-align":"right", "margin-top":"1em"}),
                             html.H1("Data Science & Analytics Portfolio",style={"color":"white", "text-align":"right","align":"center"}),
                             html.Hr(style={"border":"3px solid white", "border-radius":"5px","color":"white"}),
-                            html.H6("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
+                            html.H6("I'm a Data & BI Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.",
                                         style={"color":"white", "font-weight":"normal"})
-                        ]),width=6,style={}),
+                        ]),
+                        width=6,style={}
+                        ),
                         dbc.Col(style={"padding":"0px","background":"#101010"}),
                         # second navbar with links
                         dbc.NavbarSimple(
