@@ -15,6 +15,37 @@ from datetime import date
 import os
 from dash import dash_table
 
+
+#analysis and viz imports
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+#data preparation imports
+from sklearn.utils import shuffle
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.feature_selection import RFECV
+from sklearn.preprocessing import OneHotEncoder, MinMaxScaler
+
+#ML model imports
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+
+#metric and analysis imports
+from sklearn.metrics import confusion_matrix,accuracy_score,precision_score,recall_score,f1_score
+from sklearn.inspection import permutation_importance
+
+#deployment imports
+import joblib
+
+heart_disease_data = pd.read_csv("./data/heart.csv")
+
+
+
+
 register_page(
     __name__,
     name='Heart Disease Classification',
@@ -104,9 +135,31 @@ from sklearn.inspection import permutation_importance
 import joblib
 ```
             '''
-            )
-    ]
-    )
+            ),
+            dcc.Markdown(
+'''
+## Part 2 - Data Preparation And Exploration
+
+### ---- Load Data ----
+
+```python
+heart_disease_data = pd.read_csv("./heart.csv")
+
+#use the head method to get a glimpse of the data structure before moving forward
+heart_disease_data.head()
+```
+'''
+
+            ),
+            dash_table.DataTable(heart_disease_data.head().to_dict('records'),
+                                 style_table={'overflowX': 'auto'},
+                                 style_cell={'minWidth': '90px', 'width': '90px', 'maxWidth': '90px','whiteSpace': 'normal'})
     
+    
+    
+    
+    
+    
+    ]) 
 ],className="article"
 )
