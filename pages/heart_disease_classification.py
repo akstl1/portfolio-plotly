@@ -41,8 +41,7 @@ layout = html.Div([
 
             Given the disease's prevelence and series symptoms, doctors are collecting data from patients to assess a patient's risk for heart disease and prevent it if possible. In this analysis, I will use a set of patient data and use it to predict a patient's risk for having heart disease.
 
-            To do this, I will clean data and then utilize different machine learning models to predict a patient's risk of having heart disease. I will then take the most successful model and deploy it so others could, in theory, use it to predict this risk in real time. The deployed model can be accessed via this link: <a href="https://heart-disease-prediction-ak.herokuapp.com/
-            ">Heart Disease Prediction Website</a>
+            To do this, I will clean data and then utilize different machine learning models to predict a patient's risk of having heart disease. I will then take the most successful model and deploy it so others could, in theory, use it to predict this risk in real time.
 
             ### ---- Results ----
 
@@ -105,19 +104,9 @@ from sklearn.inspection import permutation_importance
 import joblib
 ```
             '''
-            # ,style={"border-radius":"2%"}
             )
-    ],className="title",
-    style={
-        # 'text-align': 'center',
-        # 'background-color': 'skyblue',
-        'padding-bottom': '5px',
-        'padding-left': '2em',
-        'padding-top': '1em',
-        'width':'50%',
-        'margin-left':'25%',
-        'margin-right':'25%'
-    }
+    ]
     )
     
-])
+],className="article"
+)
