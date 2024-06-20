@@ -93,12 +93,14 @@
 @media (max-width: 576px) {
   .navImage {
     /* width:100%; */
-    display:inline-block
+    display:inline-block;
   } 
 
   .navImgCont {
     display:inline-block;
     width: 100%;
+    text-align: center;
+
   }
 
   .navDesc {
@@ -119,7 +121,8 @@
 
   .navImgCont {
     display:block;
-    width:33%
+    width:33%;
+    text-align: right;
   }
 
   .navDesc {
@@ -132,6 +135,16 @@
   }
 }
 
+@media (max-width: 807px) {
+  .navImage {
+    /* width:100%; */
+    /* display:inline-block; */
+    height: 175px;
+  } 
+
+}
+
+
 
 .navImage {
   border-radius:50%;
@@ -139,7 +152,7 @@
   margin-left:auto;
   margin-right:1em;
   margin-top:1em;
-  border:4px solid white
+  border:4px solid white;
 }
 
 /* ####################### */
