@@ -94,6 +94,7 @@
   .navImage {
     /* width:100%; */
     display:inline-block;
+    margin-bottom: 1em;
   } 
 
   .navImgCont {
@@ -144,6 +145,13 @@
 
 }
 
+/* @media (min-width: 768px) {
+  .navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+} */
 
 
 .navImage {
@@ -154,6 +162,7 @@
   margin-top:1em;
   border:4px solid white;
 }
+
 
 /* ####################### */
 /* POST/ARTICLE STYLING */
