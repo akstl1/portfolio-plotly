@@ -28,7 +28,7 @@ python_tab = html.Div([
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Parkinson's Identification",
             description="Some quick example text to build on the card title and",
-            url="/"),
+            url="/heart_disease_classification"),
     create_card_left(
             image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
             title="Telecom Customer Churn Prediction",
