@@ -91,7 +91,7 @@ def create_navbar_new():
             
                             ],
                                 brand='Home',
-                                brand_href="/",
+                                brand_href="/heart_disease_classification",
                                 sticky="top",  # Uncomment if you want the navbar to always appear at the top on scroll.
                                 color="#101010",  # Change this to change color of the navbar e.g. "primary", "secondary" etc.
                                 dark=True,  # Change this to change color of text within the navbar (False for dark text)
