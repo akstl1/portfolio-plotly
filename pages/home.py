@@ -62,9 +62,8 @@ def layout():
                     # html.Hr(),
                     html.Div([
                         dbc.Tabs([
-                                dbc.Tab(python_tab,label="Python",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"33%"}),
-                                dbc.Tab(bi_tab, label="Power BI", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"33%"}),
-                                dbc.Tab(bi_tab, className="custom-tab",active_tab_class_name='custom-tab--selected',label="Tableau", tab_style={"width":"33%"}),
+                                dbc.Tab(python_tab,label="Data Science",className="custom-tab",active_tab_class_name='custom-tab--selected', tab_style={"width":"49%"}),
+                                dbc.Tab(bi_tab, label="Data Analytics", className="custom-tab",active_tab_class_name='custom-tab--selected',tab_style={"width":"49%"}),
                         ],style={"background-color":"#adadad","font-weight":"bold","height":"44px"})
                     ]),
         ], style={'height':'300px',"background-color":"#adadad"})
