@@ -91,11 +91,11 @@ Data column dictionary:
 
 1. Age
 2. Sex
-3. Chest pain type (4 values)
+3. Chest pain type (0-3)
 4. Resting blood pressure
 5. Serum cholestoral in mg/dl
 6. Fasting blood sugar > 120 mg/dl
-7. Resting electrocardiographic results (values 0,1,2)
+7. Resting electrocardiographic results (0-2)
 8. Maximum heart rate achieved
 9. Exercise induced angina
 10. Oldpeak = ST depression induced by exercise relative to rest
@@ -153,7 +153,24 @@ heart_disease_data.head()
             ),
             dash_table.DataTable(heart_disease_data.head().to_dict('records'),
                                  style_table={'overflowX': 'auto'},
-                                 style_cell={'minWidth': '90px', 'width': '90px', 'maxWidth': '90px','whiteSpace': 'normal'})
+                                 style_cell={'minWidth': '90px', 'width': '90px', 'maxWidth': '90px','whiteSpace': 'normal','textAlign': 'left'},
+                                 style_data={
+        'color': 'black',
+        'backgroundColor': 'white'
+    },
+    style_data_conditional=[
+        {
+            'if': {'row_index': 'odd'},
+            'backgroundColor': 'rgb(220, 220, 220)',
+        }
+    ],
+    style_header={
+        'backgroundColor': 'rgb(210, 210, 210)',
+        'color': 'black',
+        'fontWeight': 'bold'
+    }
+        
+                                 )
     
     
     
