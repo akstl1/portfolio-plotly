@@ -58,7 +58,8 @@ heart_disease_data = pd.read_csv("./data/heart.csv")
 
 layout = html.Div([
     html.Div([
-
+        html.H1("Heart Disease Classification", style={"text-align":"center"}),
+        html.Hr(),
         dcc.Markdown(
             '''
             # Part 1 - INTRODUCTION
