@@ -81,7 +81,7 @@ def create_navbar_new():
                                             html.I(className="fa-regular fa-file"),  # Font Awesome Icon
                                             " Resume"  # Text beside icon
                                         ],
-                                        href="/assets/A_Khariton_Resume_2024.06.19.pdf",
+                                        href="/assets/A_Khariton_Resume_2024.08.21.pdf",
                                         target="_blank",
                                         external_link=True,
                                     )
